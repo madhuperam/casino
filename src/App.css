@@ -1,38 +1,163 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+
+th,td{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+th{
+  background-color: #3A75B0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn{
+  margin: 20px;
+  width: 150px;
+  height: 50px;
+  background-color: #3A75B0;
+  color: white;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hidden{
+  visibility: hidden;
+}
+
+/*******************************************   header   ******************************************************/
+
+.header {
+  padding-top:20px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.user{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  margin: 10px 100px 10px 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+#company-logo {
+  height: 50px;
+  top: 0;
+  position: fixed;
+  margin: 10px 0 10px 100px;
+  left: 0;
+}
+
+#login-name{
+  right: 0;
+  position: fixed;
+  font-size: 20px;
+  z-index: 200;
+}
+
+#logout-user{
+  right: 45px;
+  position: fixed;
+  font-size: 20px;
+  z-index: 200;
+}
+
+#balance{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align:center;
+  color: inherit;
+}
+
+/*******************************************   Content   ******************************************************/
+
+.content{
+  align-items: center;
+  margin-top: 100px;
+}
+
+.num-div{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  height: 300px;
+  font-size: 80px;
+  padding-left: 18%;
+}
+
+.num-p{
+  margin-top: 70px;
+}
+
+.num{
+  border: 2px solid black;
+  height: 270px;
+  margin: 15px;
+}
+
+#game-data{
+  margin-left: 20%;
+  border: 1px solid gray;
+  width: 500px;
+}
+
+#play-area{
+  height: 450px;
+  width: 70%;
+  text-align: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#play{
+  right: 20%;
+  position: fixed;
+  top: 50%;
+}
+
+/*******************************************   Footer   ******************************************************/
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  z-index: 100;
+  background-color: white;
+  height: 40px;
+  align-content: center;
+  margin-bottom: 0;
+}
+
+
+@media (max-width:850px ) {
+  #game-data{
+    margin-left: 10px;
+    width: 400px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #play{
+    right: 0;
   }
 }
